@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Adeshola Oluwatoyosi | Web Developer</title>
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+    
+    .nav {
+      display: flex; 
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
+      padding: 20px;
+      align-items: center;
+      margin:25px
+    }
+    
+    .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: -1px;
+    }
+    
+    .text {
+      font-size: clamp(2rem, 10vw, 4rem);
+      color: #fff;
+      margin: 25px;
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+    
+    .tagline {
+      color: #aaa;
+      font-size: 1.2rem;
+      font-weight:300;
+      margin: 25px;
+      max-width: 600px;
+    }
+    
+    .btn {
+      color: #000;
+      padding: 12px 25px;
+      background-color: #fff;
+      margin: 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: skyblue;
+      transform: translateY(-2px);
+    }
+    
+    .section {
+      padding: 60px 25px;
+      margin:23px;
+      border-bottom: 1px solid #222;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .skill-tag {
+      background: #111;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    
+    .project-card {
+      background: #111;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .mode-toggle {
+      width: 34px;
+      height: 34px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">Nuel.dev</div>
+    <div class="mode-toggle">☀️</div>
+  </nav>
+  
+  <section class="section">
+    <h1 class="text">
+      Hello,<br>
+      I'm Adeshola Oluwatoyosi
+    </h1>
+    <p class="tagline">
+      Web developer specializing in building exceptional digital experiences. 
+      With 5+ years of turning ideas into functional, beautiful websites.
+    </p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+  
+  <section class="section">
+    <h2 class="text" style="font-weight:300;font-size: 2rem;">About</h2>
+    <p style="font-weight:300;color: #aaa; max-width: 600px;">
+      I bridge the gap between design and technology, creating websites that are 
+      both visually stunning and technically robust. When I'm not coding, you'll 
+      find me contributing to open-source projects or exploring new web technologies.
+    </p>
+    
+    <div class="skills">
+      <span class="skill-tag">HTML/CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">Jquery</span>
+      <span class="skill-tag">php</span>
+      <span class="skill-tag">Mysql</span>
+      <span class="skill-tag">Responsive Design</span>
+    </div>
+  </section>
+  
+  <!-- <section class="section">
+    <h2 class="text" style="font-size: 2rem;">Projects</h2>
+    
+    <div class="project-card">
+      <h3>E-commerce Platform</h3>
+      <p style="color: #aaa;">Built with React and Node.js, processing 500+ daily transactions.</p>
+    </div>
+    
+    <div class="project-card">
+      <h3>Portfolio Builder</h3>
+      <p style="color: #aaa;">Drag-and-drop tool for creatives to showcase their work.</p>
+    </div>
+  </section>-->
+  
+  <section class="section" id="contact">
+    <h2 class="text" style="font-size: 2rem;">Get In Touch</h2>
+    <p style="color: #aaa; margin-bottom: 20px;">
+      Have a project in mind? Let's make it happen.
+    </p>
+    <a href="mailto:toyosiadesola30@gamil.com" class="btn">Email Me</a>
+  </section>
+  
+  <script>
+    // Simple dark/light mode toggle
+    const toggle = document.querySelector('.mode-toggle');
+    const body = document.body;
+    
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      toggle.textContent = body.classList.contains('light-mode') ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
